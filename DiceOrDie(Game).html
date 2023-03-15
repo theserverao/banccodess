@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <p>
+
+
+</a>
+</p>
+<meta name = "viewport" content="width= device-width, initial-scale=1">
+
+<body background="file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice%20die.jpg" bgproperties ="relative">
+
+    <div class ="parent">
+
+<button type = " button " id = "myBtn " onclick = "myFunction()" > LOCK </button>
+
+<button type = " button " id = " roll1 " onclick = "    " 
+
+<button id ="show-image-button" > ROLL </button>
+<div id ="oneimg">
+</div>
+
+<img id = "imgid" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice%201.jpg"
+width="250px"
+height="250px"
+hidden>
+
+<img id = "imgid2" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice%203.jpg"
+width="250px"
+height="250px"
+hidden>
+
+<img id = "imgid3" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice2.jpg"
+width="250px"
+height="250px"
+hidden>
+
+<img id = "imgid4" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice%204.jpg"
+width="250px"
+height="250px"
+hidden>
+    
+
+<img id = "imgid5" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice%205.jpg"
+width="250px"
+height="250px"
+hidden>
+
+<img id = "imgid6" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/dice%206.jpg"
+width="250px"
+height="250px"
+hidden>
+
+<img id = "my-image" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/animatedd.gif"
+width="250px"
+height="250px"
+hidden>
+
+
+<img id ="winner" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/You%20Won.jpg"
+width="130px"
+height="130px"
+hidden>
+
+    <img id = "loser" src = "file:///C:/Users/REITORIA%20UCAN/Desktop/Scripts/you%20lost%20.jpg"
+width="130px"
+height="130px"
+hidden>
+<button type = "button1" id = "btrefresh" onclick = "PlayAgain()" > Play Again </button>
+
+<imput id = "myImput" type = "text">
+
+<p id = "demo" >  </p>
+<p id = "de" >    </p>
+</p>
+</p>
+<div id ="imgDiv"></div>
+    <select id ="weather">
+
+    <option value=" 0 "> Whats Your Number ? </option>
+    <option value="1" > 1 </option>
+    <option value ="2" >2 </option>
+    <option value ="3"> 3</option>
+    <option value ="4"> 4</option>
+    <option value ="5"> 5 </option>
+    <option value ="6"> 6 </option>
+    </select>
+
+<style>
+
+</style>
+<script>
+
+    function PlayAgain()
+    {
+     window.location.reload ("Refresh")
+    }
+    var image = document.getElementById("myImage");
+    
+    var deep = null;
+    var cnt = 0;
+    var cnta = 0;
+    function ROLL()
+    {
+    }
+    function myFunction()
+{
+    let x= 0;
+    x = Math.floor((Math.random() * 6) + 1);
+    const showImageButton = document.getElementById("show-image-button");
+    const myImage = document.getElementById("my-image");
+    showImageButton.addEventListener("click", ()=> {
+    myImage.hidden = !myImage.hidden;
+
+        cnt ++
+
+    const select = document.querySelector("select");
+    const para = document.querySelector("p");
+    const choice = select.value;    
+
+     setTimeout(function()
+    
+     {
+
+    },2700);
+    
+    switch ( x )
+
+    {    
+        case 1:
+
+    document.getElementById("my-image").style.display = "inline";
+ 
+    setTimeout(function()
+     {
+
+    document.getElementById("my-image").style.display = "none";
+    document.getElementById("imgid").style.display = "inline";   
+    
+    },2700);
+
+    break;
+
+    case 2:
+        document.getElementById("my-image").style.display = "inline";
+    
+        setTimeout(function()
+     {
+
+    document.getElementById("my-image").style.display = "none";
+    document.getElementById("imgid2").style.display = "inline";   
+    
+    },2700);
+    
+    break;    
+
+    case 3:
+        document.getElementById("my-image").style.display = "inline";
+   
+        setTimeout(function()
+     {
+
+    document.getElementById("my-image").style.display = "none";
+    document.getElementById("imgid3").style.display = "inline";   
+    
+    },2700);
+    break;
+
+        case 4:
+
+        document.getElementById("my-image").style.display = "inline";
+
+        setTimeout(function()
+     {
+
+    document.getElementById("my-image").style.display = "none";
+    document.getElementById("imgid4").style.display = "inline";   
+    
+    },2700);
+
+    break;
+
+        case 5:
+
+        document.getElementById("my-image").style.display ="inline";
+
+setTimeout(function()
+    {
+    document.getElementById("my-image").style.display = "none";
+    document.getElementById("imgid5").style.display = "inline";   
+
+    },2700);   
+    
+    break;
+    case 6:
+    document.getElementById("my-image").style.display ="inline";
+
+    setTimeout(function()
+
+    {
+
+    document.getElementById("my-image").style.display = "none";
+    document.getElementById("imgid6").style.display = "inline";   
+
+    },2700); 
+
+         break;
+    } 
+    
+    if (choice !== x && choice != 0 )
+    
+    {  
+    
+    setTimeout(function()
+
+    {
+
+    document.getElementById("loser").style.display = " inline ";
+
+    },2710);
+
+    }
+
+     if (choice == x )
+    {  
+   
+    setTimeout(function()
+    {
+    document.getElementById("loser").style.display = " none ";
+    document.getElementById("winner").style.display = " inline ";
+    
+    },2710);
+
+    
+
+    }
+
+      if( cnt == 2 && choice !== x  )
+    
+      {
+        
+        window.location.reload ("Refresh")
+    }
+    });
+}
+</script>
+</div>
+<style>
+
+.parent
+{
+position: relative;
+top: 640px;
+left: 382px;
+}
+ </style>
+</div>
+</body>
+</html>
